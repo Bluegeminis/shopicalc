@@ -1,0 +1,16 @@
+Using the project
+
+Add new currencies to the src/main/resources/currencies.json file. All props are required. 
+	Ideally use ISO-4217 codes for currency symbols
+	
+Add exchange rates in the src/main/resources/currencyConvertersConfig.json
+	Specify the source currency (srcCurrency) is the one to which the rate will be applied to obtain the target currency
+	
+See /shopicalc/src/test/java/shopicalc/ShoppingCartTests.java for sample usage
+
+
+Improvements
+	Use a real logging framework rather than standard out
+	Make objects immutable - skipped in this exercise to make the code less verbose
+	Implement singleton pattern using an IoC container
+	Config files (currencies, converters) could be fed dynamically (eg. from a web service, or via cmd line)
